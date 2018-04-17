@@ -1,6 +1,6 @@
-
-
 require_relative './movie.rb'
+require 'nokogiri'
+require 'open-uri'
 
 class Scraper
   def initialize
