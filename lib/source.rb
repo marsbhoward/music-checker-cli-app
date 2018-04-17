@@ -1,9 +1,12 @@
 class Source
+  require_relative './movie.rb'
 
-    attr_accessor :name
-    attr_reader :movies
+  extend Concerns::Findable
 
-    @@all = []
+  attr_accessor :name
+  attr_reader :movies
+
+  @@all = []
 
   def initialize(name)
     @name = name
