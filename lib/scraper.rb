@@ -98,6 +98,8 @@ class Scraper
         streams << movie.stream unless streams.include?(movie.stream)
       end
     end
+    puts
     puts streams
+    puts
   end
 end
