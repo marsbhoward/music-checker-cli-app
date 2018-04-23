@@ -1,6 +1,7 @@
 class Movie
+  require_relative './stream.rb'
   attr_accessor :title
-  attr_accessor :source, :genre
+  attr_accessor :stream, :genre
 
   @@all = []
 
