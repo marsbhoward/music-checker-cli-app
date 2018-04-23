@@ -43,7 +43,7 @@ class Scraper
 
   def print_movies
     self.make_movies
-    i = 0
+    i = 1
     Movie.all.each do |movie|
       puts "Movie #{i}"
       if movie.title
@@ -59,11 +59,12 @@ class Scraper
 
   def print_netflix
     self.make_movies
-    i = 0
+    i = 1
     Movie.all.each do |movie|
-      puts "Movie #{i}"
-      if movie.stream == "Netflix"
 
+
+      if movie.stream == "Netflix"
+        puts "Movie #{i}"
         puts "  Title: #{movie.title}"
         puts "  stream: #{movie.stream}"
         i = i + 1
@@ -74,11 +75,12 @@ class Scraper
 
   def print_hulu
     self.make_movies
-    i = 0
+    i = 1
     Movie.all.each do |movie|
-      puts "Movie #{i}"
+
 
       if movie.stream == "Hulu"
+        puts "Movie #{i}"
 
         puts "  Title: #{movie.title}"
         puts "  stream: #{movie.stream}"
