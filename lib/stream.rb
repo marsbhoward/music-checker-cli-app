@@ -1,12 +1,13 @@
-class Source
+class Stream
   require_relative './movie.rb'
 
-  extend Concerns::Findable
+       extend Concerns::Findable
 
-  attr_accessor :name
-  attr_reader :movies
 
-  @@all = []
+    attr_accessor :name
+    attr_reader :movies
+
+    @@all = []
 
   def initialize(name)
     @name = name
@@ -26,13 +27,13 @@ class Source
   end
 
   def self.create(name)
-    source = new(name)
-    source.save
-    source
+    stream = new(name)
+    stream.save
+    stream
   end
 
   def add_movie(movie)
-    movie.source = self unless movie.source
+    movie.stream = self unless movie.stream
     movies << movie unless moviess.include?(movie)
   end
 
